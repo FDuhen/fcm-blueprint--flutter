@@ -1,16 +1,25 @@
-# fcm_cleanarch_flutter
+# FCM CleanArch Flutter
 
-A new Flutter project.
+This project is showcasing one of the many solutions to implement Firebase Cloud Messaging in a clean (in my opinion) and more scalable way.  
 
-## Getting Started
+## Environment
 
-This project is a starting point for a Flutter application.
+This project was compiled with Flutter 2.0.2.  
 
-A few resources to get you started if this is your first Flutter project:
+Libraries used:  
+- [firebase_core](https://pub.dev/packages/firebase_core)
+- [firebase_messaging](https://pub.dev/packages/firebase_messaging)
+- [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications)
+- [get_it](https://pub.dev/packages/get_it)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Disclaimer
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is not a step-by-step tutorial.  
+You'll be able to use this code just by integrating it in your project, but you'll still have to create your Firebase Project and setup the Android and iOS parts to receive the notifications.
+
+
+## The reason behind this
+
+I was tired to see all those Medium Posts and Github projects integrating their notification center directly inside their widgets.  
+For this reason I created this sample project. I'll update it whenever I find something better to do.  
+Feel free to open any issue or discussion !
