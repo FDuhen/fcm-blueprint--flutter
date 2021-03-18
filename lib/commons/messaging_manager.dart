@@ -5,7 +5,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class MessagingManager {
 
-
   /// Initialize the [FlutterLocalNotificationsPlugin] package.
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
@@ -17,22 +16,11 @@ class MessagingManager {
     importance: Importance.high,
   );
 
-  /// Define a top-level named handler which background/terminated messages will
-  /// call.
-  ///
-  /// To verify things are working, check out the native platform logs.
-  Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-    // If you're going to use other Firebase services in the background, such as Firestore,
-    // make sure you call `initializeApp` before using other Firebase services.
-    await Firebase.initializeApp();
-    print('Handling a background message ${message.messageId}');
-  }
-
-  Future setupFirebase() async {
+  Future setupFirebase(Function backgroundMessageHandler) async {
     await Firebase.initializeApp();
 
     // Set the background messaging handler early on, as a named top-level function
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    FirebaseMessaging.onBackgroundMessage(backgroundMessageHandler);
 
     // Create an Android Notification Channel.
     ///
