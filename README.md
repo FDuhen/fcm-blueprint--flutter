@@ -1,4 +1,4 @@
-# FCM CleanArch Flutter
+# FCM Blueprint Flutter
 
 This project is showcasing one of the many solutions to implement Firebase Cloud Messaging in a clean (in my opinion) and more scalable way.  
 
